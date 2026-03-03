@@ -20,8 +20,10 @@ local function ImportBlizzard_EditMode(addon, resolution)
 
     layouts = C_EditMode.GetLayouts()
 
+    local existingIndex
     for i = #layouts.layouts, 1, -1 do
         if layouts.layouts[i].layoutName == "Naowh" then
+            existingIndex = i
             tremove(layouts.layouts, i)
         end
     end
@@ -33,6 +35,14 @@ local function ImportBlizzard_EditMode(addon, resolution)
     tinsert(layouts.layouts, info)
     C_EditMode.SaveLayouts(layouts)
 
+    local newIndex = Enum.EditModePresetLayoutsMeta.NumValues + #layouts.layouts
+
+    if not existingIndex then
+        C_EditMode.OnLayoutAdded(newIndex, true, true)
+    else
+        C_EditMode.SetActiveLayout(newIndex)
+    end
+
     SE.CompleteSetup(addon)
 
     NUI.db.char.loaded = true
@@ -40,13 +50,13 @@ local function ImportBlizzard_EditMode(addon, resolution)
 end
 
 function SE.Blizzard_EditMode(addon, import, resolution)
-    local layout
-
     if import then
         ImportBlizzard_EditMode(addon, resolution)
+
+        return
     end
 
-    layout = IsLayoutExisting()
+    local layout = IsLayoutExisting()
 
     if not layout then
         SE.RemoveFromDatabase(addon)

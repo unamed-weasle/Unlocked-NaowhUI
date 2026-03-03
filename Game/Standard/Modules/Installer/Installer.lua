@@ -154,7 +154,9 @@ I.installer = {
             end
 
             PluginInstallFrame.Desc2:SetText("Click on the button below to setup your Class Layout")
-            PluginInstallFrame.Desc3:SetText("Your class: " .. NUI.myLocalizedClass)
+            local classColor = RAID_CLASS_COLORS[NUI.myclass]
+            local hex = classColor and classColor.colorStr or "ffffffff"
+            PluginInstallFrame.Desc3:SetText("Your class: |c" .. hex .. NUI.myLocalizedClass .. "|r")
             PluginInstallFrame.Option1:Show()
             PluginInstallFrame.Option1:SetScript("OnClick", function() SE:Setup("ClassLayout", true) end)
             PluginInstallFrame.Option1:SetText("Setup Class Layout")

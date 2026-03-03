@@ -122,10 +122,12 @@ local function ImportClassCooldowns()
 end
 
 function SE.ClassLayout(addon, import)
-    local layout
-
     if import then
-        ImportClassCooldowns()
+        local success = ImportClassCooldowns()
+
+        if success then
+            SE.CompleteSetup(addon)
+        end
     end
 end
 

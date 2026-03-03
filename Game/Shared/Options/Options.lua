@@ -111,7 +111,11 @@ NUI.options = {
                 class_layout = {
                     name = "Class Layout",
                     order = 2,
-                    desc = "Setup your Class Layout",
+                    desc = function()
+                        local classColor = RAID_CLASS_COLORS[NUI.myclass]
+                        local hex = classColor and classColor.colorStr or "ffffffff"
+                        return "Setup your |c" .. hex .. NUI.myLocalizedClass .. "|r's Class Layout"
+                    end,
                     hidden = function()
                         if C_CVar.GetCVar("cooldownViewerEnabled") == "0" then
 

@@ -4,6 +4,8 @@ I don't know how long I'll update this and keep it in sync with the original.
 
 [Note]: Naowh seems to have removed or privated his Github repository. So I'm no longer able to automate the edit. I uploaded a new version but you will have to follow the steps below for future updates
 
+[NEW]: I made a page to generate tokens for NaowhUI ;) -> https://unamed-weasle.github.io/NaowhUI-TokenGenerator/
+
 # Caveats
 NaowhUI uses a lot of other addons. You will have to lookup the original addon to find out what they are as they can and will change as Naowh changes his UI.
 
@@ -29,3 +31,4 @@ end
 `C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns\NaowhUI\Game\Shared\General` <-- Full default path to the Functions.lua file
 
 Ingame run `/nui install` to trigger the installer
+

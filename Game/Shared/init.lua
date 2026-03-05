@@ -42,7 +42,7 @@ end
 function NUI:OnInitialize()
     self.db = _G.LibStub("AceDB-3.0"):New("NaowhDB")
 
-    if self.db.global.version and self.db.global.version <= 20260224 then
+    if self.db.global.version and self.db.global.version <= 20260304 then
         self.db:ResetDB()
     end
 

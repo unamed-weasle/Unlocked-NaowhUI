@@ -17,7 +17,7 @@ local function ImportElvUI(addon, resolution)
     local profileType, _, data = DI:Decode(D[profile][1])
 
     if not data or type(data) ~= "table" then
-        NUI:Print("An error occured while decompressing the profile. Please report this to rootkit1337 (Lukas) on Discord")
+        NUI:Print("An error occured while decompressing the profile. Please report this on Discord")
 
         return
     end

@@ -18,6 +18,11 @@ function SE.CompleteSetup(addon)
         PluginInstallStepComplete:Show()
     end
 
+    if addon == "ClassLayout" then
+
+        return
+    end
+
     NUI.db.global.profiles = NUI.db.global.profiles or {}
     NUI.db.global.profiles[addon] = true
 end

@@ -1,6 +1,6 @@
 ## NaowhUI
 
-**Source**: [https://github.com/rootkit1337tv/NaowhUI](https://github.com/rootkit1337tv/NaowhUI)
+**Source**: [https://github.com/naowh-dev/NaowhUI](https://github.com/naowh-dev/NaowhUI)
 
 ```
 Copyright © 2026 The contents of this addon, excluding externals listed below, are

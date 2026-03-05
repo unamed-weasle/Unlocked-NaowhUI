@@ -31,3 +31,5 @@ end
 `C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns\NaowhUI\Game\Shared\General` <-- Full default path to the Functions.lua file
 
 Ingame run `/nui install` to trigger the installer
+
+
